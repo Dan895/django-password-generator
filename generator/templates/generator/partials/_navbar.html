@@ -1,0 +1,28 @@
+<!--Barra de navegacion del sitio que se puede incluir en cualquier documento html que asi lo necesite-->
+
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <!-- usa la segunda forma de direccionamiento -->
+      <a class="navbar-brand" href="{% url 'home'%}">Password Generator</a>
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <!-- primera forma de direccionamiento -->
+          <!-- <a class="nav-link" aria-current="page" href="/">Home</a> -->
+          <!-- segunda forma de direccionamiento -->
+          <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <!--Primera forma para direccionar hacia about-->
+          <!-- <a class="nav-link" href="/about">About</a> -->
+          <!--Segunda forma de direccionamiento, como lo visto en el formulario de home.html en la opcion 'action' (recordar que es por nombres no por rutas, ver ulr.py por si lo olvido)-->
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
